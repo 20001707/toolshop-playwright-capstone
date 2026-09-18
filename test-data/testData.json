@@ -1,0 +1,12 @@
+{
+  "validUser": {
+    "name": "Jack Howe",
+    "role": "user",
+    "email": "customer2@practicesoftwaretesting.com",
+    "password": "welcome01"
+  },
+  "product": {
+    "name": "Hammer",
+    "url": "/product/01M2SZBE85RT6DX85AYQ1DC9HH"
+  }
+}
