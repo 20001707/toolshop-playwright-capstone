@@ -8,5 +8,24 @@
   "product": {
     "name": "Hammer",
     "url": "/product/01M2SZBE85RT6DX85AYQ1DC9HH"
+  },
+  "registrationUser": {
+    "firstName": "Test",
+    "lastName": "User",
+    "dateOfBirth": "1999-08-09",
+    "country": "BS",
+    "postalCode": "7567",
+    "houseNumber": "7666",
+    "street": "Nicolas Track",
+    "city": "Jaydahaven",
+    "state": "Texas",
+    "phone": "78865",
+    "email": "testuser987654@gmail.com",
+    "password": "Testhouse@2000"
+  },
+  "checkoutAddress": {
+    "country": "BS",
+    "postalCode": "7567",
+    "houseNumber": "7666"
   }
 }

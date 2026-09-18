@@ -4,6 +4,12 @@ class HomePage {
 
     this.searchInput = page.locator('[data-test="search-query"]');
     this.searchButton = page.locator('[data-test="search-submit"]');
+    this.sortDropdown = page.locator('[data-test="sort"]');
+
+    this.categoriesMenu = page.locator('[data-test="nav-categories"]');
+    this.handToolsCategory = page.locator('[data-test="nav-hand-tools"]');
+
+    this.page2Button = page.getByRole('button', { name: 'Page-2' });
   }
 
   async open() {
@@ -21,7 +27,21 @@ class HomePage {
       .filter({ hasText: productName })
       .first();
 
+    await productLink.waitFor({ state: 'visible' });
     await productLink.click();
+  }
+
+  async sortProducts(option) {
+    await this.sortDropdown.selectOption({ label: option });
+  }
+
+  async selectHandToolsCategory() {
+    await this.categoriesMenu.click();
+    await this.handToolsCategory.click();
+  }
+
+  async goToPageTwo() {
+    await this.page2Button.click();
   }
 }
 

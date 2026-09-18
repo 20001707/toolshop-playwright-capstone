@@ -4,7 +4,8 @@ class LoginPage {
 
     this.emailInput = page.locator('[data-test="email"]');
     this.passwordInput = page.locator('[data-test="password"]');
-    this.signInButton = page.getByRole('button', { name: 'Login' });
+    this.signInButton = page.locator('[data-test="login-submit"]');
+    this.loginErrorMessage = page.getByText('Invalid email or password');
   }
 
   async open() {
@@ -15,6 +16,10 @@ class LoginPage {
     await this.emailInput.fill(email);
     await this.passwordInput.fill(password);
     await this.signInButton.click();
+  }
+
+  async expectInvalidLoginMessage() {
+    await this.loginErrorMessage.waitFor({ state: 'visible' });
   }
 }
 

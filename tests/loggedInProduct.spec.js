@@ -20,7 +20,5 @@ test('Logged-in user should be able to add a product to the cart', async ({
 
   await productPage.expectProductAddedToCart();
 
-  await expect(
-    loggedInPage.getByText('Product added to shopping cart.')
-  ).toBeVisible();
+  await expect(productPage.successToast).toBeVisible();
 });
