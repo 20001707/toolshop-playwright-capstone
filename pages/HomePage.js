@@ -24,8 +24,8 @@ class HomePage {
   async openProduct(productName) {
     const productLink = this.page
       .locator('a[href*="/product/"]')
-      .filter({ hasText: productName })
-      .first();
+      .filter({ hasText: productName }) //this will filter the locator to only include links that contain the product name
+      .first();//this will select the first link that matches the filter
 
     await productLink.waitFor({ state: 'visible' });
     await productLink.click();
